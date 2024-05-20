@@ -53,6 +53,7 @@ const typo = {
 
 const color = {
   primary: "#EF4123",
+  secondary: "#FBE2DE",
   grey: {
     900: "#3C3C3E",
     800: "#4F4F51",
