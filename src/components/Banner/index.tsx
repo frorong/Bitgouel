@@ -1,12 +1,8 @@
-/** @jsxImportSource @emotion/react */
-
 "use client";
 
 import * as S from "./style";
 
 import { useEffect, useState } from "react";
-
-import { css } from "@emotion/react";
 
 const Banner = () => {
   const [imageList, setImageList] = useState<JSX.Element[]>([]);

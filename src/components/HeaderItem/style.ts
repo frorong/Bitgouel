@@ -7,8 +7,9 @@ export const Wrapper = styled(Link)`
   align-items: center;
   justify-content: center;
 
-  width: 10.5rem;
+  width: 8rem;
   height: 100%;
+  margin: 0 1.25rem;
 
   transition: ease-in-out 0.2s;
   border-bottom: ${({ theme }) => theme.color.white} 2px solid;
