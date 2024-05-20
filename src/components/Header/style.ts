@@ -16,6 +16,18 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled.span`
-  ${({ theme }) => theme.typo.subtitle};
+  ${({ theme }) => theme.typo.h4};
   color: ${({ theme }) => theme.color.grey[900]};
+`;
+
+export const ItemList = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ItemDivider = styled.div`
+  width: 1px;
+  height: 1.25rem;
+
+  background-color: ${({ theme }) => theme.color.grey[400]};
 `;
