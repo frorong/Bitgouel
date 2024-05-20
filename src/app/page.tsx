@@ -1,3 +1,5 @@
+import { MainPage } from "@/pageContainer";
+
 export default function Home() {
-  return <div></div>;
+  return <MainPage />;
 }
