@@ -8,15 +8,17 @@ export const Wrapper = styled.div`
   width: 100vw;
   height: 33.75rem;
 
-  position: relative;
   overflow: hidden;
-
-  img {
-    object-fit: cover;
-  }
 `;
 
-export const FadeInImage = styled(Image)`
+export const ImageWrapper = styled.div`
+  width: calc(100vw + 100px);
+
+  position: relative;
+  overflow: hidden;
+`;
+
+export const FadeInImage = styled.img`
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -26,7 +28,24 @@ export const FadeInImage = styled(Image)`
     }
   }
 
-  animation: fadeIn 1s ease-in-out;
+  @keyframes slide {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100vw + 100px);
+
+  object-fit: cover;
+
+  animation: fadeIn 1s ease-in-out, slide 10s ease-in-out;
 `;
 
 export const BannerTitleWrapper = styled.div`

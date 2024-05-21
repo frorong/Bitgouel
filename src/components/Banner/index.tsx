@@ -5,19 +5,20 @@ import * as S from "./style";
 
 const text = `빛고을에서는 "A"조도 될 수 있어!` as const;
 
+const IMAGE_LENGTH = 4 as const;
+
 const Banner: React.FC = () => {
   const [imageList, setImageList] = useState<JSX.Element[]>([]);
   const [current, setCurrent] = useState<number>(0);
 
   useEffect(() => {
-    const newImageList = new Array(3)
+    const newImageList = new Array(IMAGE_LENGTH)
       .fill(0)
       .map((_, index) => (
         <S.FadeInImage
           key={index}
           src={`/banner/${index + 1}.png`}
           alt="배너이미지"
-          layout="fill"
         />
       ));
     setImageList(newImageList);
@@ -43,7 +44,7 @@ const Banner: React.FC = () => {
           </S.AnimatedChar>
         ))}
       </S.BannerTitleWrapper>
-      {imageList[current]}
+      <S.ImageWrapper>{imageList[current]}</S.ImageWrapper>
     </S.Wrapper>
   );
 };
