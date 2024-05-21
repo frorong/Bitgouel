@@ -1,5 +1,5 @@
-import { MainPage } from "@/pageContainer";
+import { InquiryPage } from "@/pageContainer";
 
 export default function Home() {
-  return <MainPage />;
+  return <InquiryPage />;
 }

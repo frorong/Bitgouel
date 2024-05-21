@@ -1,5 +1,6 @@
 export interface EmailType {
-  from: string;
   title: string;
   message: string;
+  contact: string;
+  name: string;
 }
