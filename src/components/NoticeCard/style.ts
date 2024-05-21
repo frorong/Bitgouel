@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
-export const Card = styled.div`
+import Link from "next/link";
+
+export const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
