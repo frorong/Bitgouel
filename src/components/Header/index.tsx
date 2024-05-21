@@ -26,7 +26,7 @@ const Routes = [
 
 const Header = () => (
   <S.Wrapper>
-    <S.TitleWrapper>
+    <S.TitleWrapper href="/">
       <Logo />
       <S.Title>빛고을배드민턴클럽</S.Title>
     </S.TitleWrapper>
