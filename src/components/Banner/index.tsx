@@ -1,10 +1,11 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import * as S from "./style";
 
-import { useEffect, useState } from "react";
+const text = `빛고을에서는 "A"조도 될 수 있어!` as const;
 
-const Banner = () => {
+const Banner: React.FC = () => {
   const [imageList, setImageList] = useState<JSX.Element[]>([]);
   const [current, setCurrent] = useState<number>(0);
 
@@ -16,7 +17,7 @@ const Banner = () => {
           key={index}
           src={`/banner/${index + 1}.png`}
           alt="배너이미지"
-          fill
+          layout="fill"
         />
       ));
     setImageList(newImageList);
@@ -30,7 +31,21 @@ const Banner = () => {
     };
   }, []);
 
-  return <S.Wrapper>{imageList[current]}</S.Wrapper>;
+  return (
+    <S.Wrapper>
+      <S.BannerTitleWrapper>
+        {text.split("").map((char, index) => (
+          <S.AnimatedChar
+            key={index}
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
+            {char}
+          </S.AnimatedChar>
+        ))}
+      </S.BannerTitleWrapper>
+      {imageList[current]}
+    </S.Wrapper>
+  );
 };
 
 export default Banner;
