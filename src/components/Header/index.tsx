@@ -7,7 +7,7 @@ import { HeaderItem } from "@/components";
 
 const Routes = [
   {
-    name: "공지사항1",
+    name: "공지사항",
     path: "/notice",
   },
   {
@@ -19,8 +19,8 @@ const Routes = [
     path: "/notice",
   },
   {
-    name: "공지사항4",
-    path: "/notice",
+    name: "문의하기",
+    path: "/inquiry",
   },
 ] as const;
 
