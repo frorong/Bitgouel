@@ -25,9 +25,14 @@ export const ItemList = styled.div`
   align-items: center;
 `;
 
+export const ItemWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const ItemDivider = styled.div`
   width: 1px;
-  height: 1.25rem;
+  height: 20px;
 
   background-color: ${({ theme }) => theme.color.grey[400]};
 `;

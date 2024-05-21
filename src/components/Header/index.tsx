@@ -11,16 +11,16 @@ const Routes = [
     path: "/notice",
   },
   {
-    name: "공지사항",
+    name: "공지사항2",
     path: "/notice",
   },
   {
-    name: "공지사항",
+    name: "공지사항3",
     path: "/notice",
   },
   {
-    name: "공지사항",
-    path: "/notice",
+    name: "문의하기",
+    path: "/inquiry",
   },
 ] as const;
 
@@ -33,10 +33,10 @@ const Header = () => (
 
     <S.ItemList>
       {Routes.map((route, index) => (
-        <>
-          <HeaderItem key={index} name={route.name} path={route.path} />
+        <S.ItemWrapper key={route.name}>
+          <HeaderItem name={route.name} path={route.path} />
           {index !== Routes.length - 1 && <S.ItemDivider />}
-        </>
+        </S.ItemWrapper>
       ))}
     </S.ItemList>
   </S.Wrapper>
