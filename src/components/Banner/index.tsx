@@ -17,7 +17,7 @@ const Banner: React.FC = () => {
       .map((_, index) => (
         <S.FadeInImage
           key={index}
-          src={`/banner/${index + 1}.png`}
+          src={`/banner/${index + 1}.webp`}
           alt="배너이미지"
         />
       ));
