@@ -4,6 +4,8 @@ import { NoticeDetailPage } from "@/pageContainer";
 
 import type { Metadata } from "next";
 
+import { NotionAPI } from "notion-client";
+
 export const metadata: Metadata = {
   title: "빛고을배드민턴클럽 홈패이지",
   description: "빛고을배드민턴클럽의 홈패이지입니다.",
