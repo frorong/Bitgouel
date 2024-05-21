@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 export const Wrapper = styled.header`
   display: flex;
