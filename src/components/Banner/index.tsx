@@ -5,7 +5,7 @@ import * as S from "./style";
 
 const text = `빛고을에서는 "A"조도 될 수 있어!` as const;
 
-const IMAGE_LENGTH = 4 as const;
+const IMAGE_LENGTH = 5 as const;
 
 const Banner: React.FC = () => {
   const [imageList, setImageList] = useState<JSX.Element[]>([]);
