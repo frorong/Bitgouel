@@ -11,11 +11,11 @@ const Routes = [
     path: "/notice",
   },
   {
-    name: "공지사항2",
+    name: "임시헤더1",
     path: "/notice",
   },
   {
-    name: "공지사항3",
+    name: "임시헤더2",
     path: "/notice",
   },
   {
@@ -26,7 +26,7 @@ const Routes = [
 
 const Header = () => (
   <S.Wrapper>
-    <S.TitleWrapper>
+    <S.TitleWrapper href="/">
       <Logo />
       <S.Title>빛고을배드민턴클럽</S.Title>
     </S.TitleWrapper>

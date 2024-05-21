@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import Link from "next/link";
+
 export const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
@@ -9,7 +11,7 @@ export const Wrapper = styled.header`
   padding: 0 6.25rem;
 `;
 
-export const TitleWrapper = styled.div`
+export const TitleWrapper = styled(Link)`
   display: flex;
   align-items: center;
   gap: 0.875rem;
