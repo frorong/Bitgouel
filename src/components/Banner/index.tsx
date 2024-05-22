@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./style";
 
-const text = `빛고을에서는 "A"조도 될 수 있어!` as const;
+const text = `빛고을에서는"A"조도될수있어!` as const;
 
 const IMAGE_LENGTH = 5 as const;
 
