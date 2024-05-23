@@ -2,13 +2,13 @@
 
 import { sendEmail } from "@/api";
 import { Input, Textarea, Button, CheckDialog } from "@/components";
-import { isExistCookie } from "@/lib";
 
 import { toast } from "react-toastify";
 
 import * as S from "./style";
 
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const InquiryPage = () => {
   const [name, setName] = useState<string>("");
@@ -17,6 +17,8 @@ const InquiryPage = () => {
   const [contact, setContact] = useState<string>("");
 
   const dialog = useRef<HTMLDialogElement>(null);
+
+  const { push } = useRouter();
 
   const handleModal = {
     show: () => dialog.current?.showModal(),
@@ -39,6 +41,11 @@ const InquiryPage = () => {
       message: message,
       contact: contact,
     });
+
+    document.cookie = "isMailed=true; max-age=600";
+
+    toast.success("문의가 성공적으로 발송되었습니다.");
+    push("/");
   };
 
   return (

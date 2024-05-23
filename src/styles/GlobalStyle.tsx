@@ -4,6 +4,8 @@ import { Global, css } from "@emotion/react";
 
 import emotionReset from "emotion-reset";
 
+import "react-toastify/dist/ReactToastify.css";
+
 export function GlobalStyle() {
   return (
     <Global
