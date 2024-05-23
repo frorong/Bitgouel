@@ -1,8 +1,10 @@
 "use client";
 
 import { sendEmail } from "@/api";
+import { Input } from "@/components";
 
 import * as S from "./style";
+
 import { useEffect } from "react";
 
 const InquiryPage = () => {
@@ -18,6 +20,7 @@ const InquiryPage = () => {
   return (
     <S.CardContainer>
       <S.Title>문의하기</S.Title>
+      <Input placeholder="이름을 입력하세요." />
     </S.CardContainer>
   );
 };
