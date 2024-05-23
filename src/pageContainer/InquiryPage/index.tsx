@@ -1,7 +1,7 @@
 "use client";
 
 import { sendEmail } from "@/api";
-import { Input, Textarea } from "@/components";
+import { Input, Textarea, Button } from "@/components";
 
 import * as S from "./style";
 
@@ -42,6 +42,7 @@ const InquiryPage = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
+      <Button>제출하기</Button>
     </S.CardContainer>
   );
 };

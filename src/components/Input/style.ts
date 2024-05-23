@@ -4,7 +4,7 @@ export const TextInput = styled.input<{ isError: boolean; isLong: boolean }>`
   display: flex;
   align-items: center;
 
-  width: ${({ isLong }) => (isLong ? "100%" : "300px")};
+  width: ${({ isLong }) => (isLong ? "100%" : "18.75rem")};
   height: 2.5rem;
   padding: 0 0.75rem;
 
