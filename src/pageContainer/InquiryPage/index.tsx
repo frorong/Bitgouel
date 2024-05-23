@@ -1,7 +1,7 @@
 "use client";
 
 import { sendEmail } from "@/api";
-import { Input } from "@/components";
+import { Input, Textarea } from "@/components";
 
 import * as S from "./style";
 
@@ -28,17 +28,17 @@ const InquiryPage = () => {
         onChange={(e) => setName(e.target.value)}
       />
       <Input
+        placeholder="회신 연락처를 입력하세요."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <Input
         placeholder="문의 제목을 입력하세요."
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <Input
+      <Textarea
         placeholder="문의할 내용을 입력하세요."
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <Input
-        placeholder="회신 연락처를 입력하세요."
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
