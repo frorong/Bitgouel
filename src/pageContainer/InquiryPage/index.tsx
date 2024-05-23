@@ -5,9 +5,11 @@ import { Input } from "@/components";
 
 import * as S from "./style";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const InquiryPage = () => {
+  const [name, setName] = useState<string>("");
+
   useEffect(() => {
     // sendEmail({
     //   name: "이승제",
@@ -20,7 +22,26 @@ const InquiryPage = () => {
   return (
     <S.CardContainer>
       <S.Title>문의하기</S.Title>
-      <Input placeholder="이름을 입력하세요." />
+      <Input
+        placeholder="문의자의 이름을 입력하세요."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <Input
+        placeholder="문의 제목을 입력하세요."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <Input
+        placeholder="문의할 내용을 입력하세요."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <Input
+        placeholder="회신 연락처를 입력하세요."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
     </S.CardContainer>
   );
 };
