@@ -20,7 +20,7 @@ const InquiryPage = () => {
   }, []);
 
   return (
-    <S.CardContainer>
+    <S.Container>
       <S.Title>문의하기</S.Title>
       <Input
         placeholder="문의자의 이름을 입력하세요."
@@ -43,7 +43,7 @@ const InquiryPage = () => {
         onChange={(e) => setName(e.target.value)}
       />
       <Button>제출하기</Button>
-    </S.CardContainer>
+    </S.Container>
   );
 };
 

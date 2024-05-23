@@ -5,7 +5,8 @@ export const ButtonElement = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: 18.75rem;
+  width: 100%;
+  max-width: 18.75rem;
   height: 3.75rem;
 
   border-radius: 0.625rem;
