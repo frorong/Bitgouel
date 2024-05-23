@@ -1,9 +1,6 @@
-/** @jsxImportSource @emotion/react */
-
 "use client";
 
 import { HTMLAttributes } from "react";
-import { css } from "@emotion/react";
 
 import { Button } from "@/components";
 
