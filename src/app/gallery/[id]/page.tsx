@@ -1,6 +1,6 @@
 import "react-notion-x/src/styles.css";
 
-import { NoticeDetailPage } from "@/pageContainer";
+import { NotionDetailPage } from "@/pageContainer";
 import { notion } from "@/lib";
 import { gallery } from "@/constant";
 
@@ -26,5 +26,5 @@ export default async function Gallery({ params: { id } }: Params) {
   if (!currentGallery) return redirect(GALLERY_LIST_PAGE);
 
   const recordMap = await notion.getPage(currentGallery.notionLink);
-  return <NoticeDetailPage recordMap={recordMap} />;
+  return <NotionDetailPage postType="gallery" recordMap={recordMap} />;
 }

@@ -1,6 +1,6 @@
 import "react-notion-x/src/styles.css";
 
-import { NoticeDetailPage } from "@/pageContainer";
+import { NotionDetailPage } from "@/pageContainer";
 import { notion } from "@/lib";
 import { notice } from "@/constant";
 
@@ -26,5 +26,5 @@ export default async function Notice({ params: { id } }: Params) {
   if (!currentNotice) return redirect(NOTICE_LIST_PATH);
 
   const recordMap = await notion.getPage(currentNotice.notionLink);
-  return <NoticeDetailPage recordMap={recordMap} />;
+  return <NotionDetailPage postType="notice" recordMap={recordMap} />;
 }
