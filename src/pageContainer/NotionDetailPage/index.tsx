@@ -7,16 +7,20 @@ import { ReturnChevronIcon } from "@/assets";
 
 import * as S from "./style";
 
-const NOTICE_LIST_PATH = "/notice" as const;
-
 interface Props {
   recordMap: ExtendedRecordMap;
+  postType: "notice" | "gallery";
 }
 
-const NoticeDetailPage: React.FC<Props> = ({ recordMap }) => {
+const PATH = {
+  notice: "/notice",
+  gallery: "/gallery",
+} as const;
+
+const NotionDetailPage: React.FC<Props> = ({ recordMap, postType }) => {
   return (
     <S.Wrapper>
-      <S.ReturnButton href={NOTICE_LIST_PATH}>
+      <S.ReturnButton href={PATH[postType]}>
         <ReturnChevronIcon />
         <S.ReturnText>뒤로가기</S.ReturnText>
       </S.ReturnButton>
@@ -25,4 +29,4 @@ const NoticeDetailPage: React.FC<Props> = ({ recordMap }) => {
   );
 };
 
-export default NoticeDetailPage;
+export default NotionDetailPage;

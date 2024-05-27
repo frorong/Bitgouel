@@ -2,7 +2,7 @@ import "react-notion-x/src/styles.css";
 
 import { NotionDetailPage } from "@/pageContainer";
 import { notion } from "@/lib";
-import { notice } from "@/constant";
+import { gallery } from "@/constant";
 
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "빛고을배드민턴클럽의 홈패이지입니다.",
 };
 
-const NOTICE_LIST_PATH = "/notice" as const;
+const GALLERY_LIST_PAGE = "/gallery" as const;
 
 interface Params {
   params: {
@@ -20,11 +20,11 @@ interface Params {
   };
 }
 
-export default async function Notice({ params: { id } }: Params) {
-  const currentNotice = notice[parseInt(id)];
+export default async function Gallery({ params: { id } }: Params) {
+  const currentGallery = gallery[parseInt(id)];
 
-  if (!currentNotice) return redirect(NOTICE_LIST_PATH);
+  if (!currentGallery) return redirect(GALLERY_LIST_PAGE);
 
-  const recordMap = await notion.getPage(currentNotice.notionLink);
-  return <NotionDetailPage postType="notice" recordMap={recordMap} />;
+  const recordMap = await notion.getPage(currentGallery.notionLink);
+  return <NotionDetailPage postType="gallery" recordMap={recordMap} />;
 }

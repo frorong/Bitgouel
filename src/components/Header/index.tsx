@@ -11,8 +11,8 @@ const Routes = [
     path: "/notice",
   },
   {
-    name: "임시헤더1",
-    path: "/notice",
+    name: "행사갤러리",
+    path: "/gallery",
   },
   {
     name: "임시헤더2",
