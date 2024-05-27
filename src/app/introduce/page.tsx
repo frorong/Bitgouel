@@ -1,5 +1,5 @@
-import { InquiryPage } from "@/pageContainer";
+import { IntroducePage } from "@/pageContainer";
 
 export default async function Introduce() {
-  return <InquiryPage />;
+  return <IntroducePage />;
 }
