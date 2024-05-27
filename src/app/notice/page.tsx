@@ -1,5 +1,5 @@
-import { NoticePage } from "@/pageContainer";
+import { NotionPage } from "@/pageContainer";
 
 export default function Notice() {
-  return <NoticePage />;
+  return <NotionPage postType="notice" />;
 }
