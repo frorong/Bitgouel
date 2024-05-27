@@ -24,7 +24,7 @@ const NotionListPage: React.FC<Props> = ({ postType }) => {
     <S.CardContainer>
       <S.Title>{TITLE[postType]}</S.Title>
       {CONTENT[postType].map((item) => (
-        <NoticeCard key={item.id} notice={item} />
+        <NoticeCard key={item.id} notice={item} postType={postType} />
       ))}
     </S.CardContainer>
   );
