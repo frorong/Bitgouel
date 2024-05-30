@@ -38,7 +38,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled.span`
-  font-size: 6.25rem;
+  font-size: 4.25rem;
   font-weight: 700;
   color: ${({ theme }) => theme.color.white};
   -webkit-text-stroke: 0.063rem ${({ theme }) => theme.color.grey[700]};

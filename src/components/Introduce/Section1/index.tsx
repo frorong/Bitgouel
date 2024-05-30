@@ -11,7 +11,7 @@ interface Props {
 const Section1: React.FC<Props> = ({ forwardRef }) => (
   <S.Section ref={forwardRef}>
     <S.ImageWrapper>
-      <Image fill src="/Introduce/section1.png" alt="cover" />
+      <Image src={"/Introduce/section1.png"} alt="cover" fill />
     </S.ImageWrapper>
     <S.TitleWrapper>
       <S.Title>빛고을 배드민턴 클럽에</S.Title>
