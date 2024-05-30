@@ -40,7 +40,6 @@ export const Title = styled.span`
   font-size: 6.25rem;
   font-weight: 700;
   color: ${({ theme }) => theme.color.white};
-  /* text-shadow: 3px 3px ${({ theme }) => theme.color.black}; */
   -webkit-text-stroke: 0.063rem ${({ theme }) => theme.color.grey[700]};
 `;
 

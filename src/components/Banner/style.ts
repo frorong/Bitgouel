@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 
   width: 100vw;
-  height: 33.75rem;
+  height: calc(100vh - 5.5rem);
 
   overflow: hidden;
 `;
@@ -41,6 +41,7 @@ export const FadeInImage = styled.img`
   justify-content: center;
 
   width: calc(100vw + 100px);
+  height: calc(100vh - 5.5rem);
 
   object-fit: cover;
 
