@@ -7,7 +7,9 @@ interface Props {
 }
 
 const Section2: React.FC<Props> = ({ forwardRef }) => (
-  <S.Section ref={forwardRef}></S.Section>
+  <S.Section ref={forwardRef}>
+    <h1>안녕하세요</h1>
+  </S.Section>
 );
 
 export default Section2;

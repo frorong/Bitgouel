@@ -5,8 +5,9 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
 
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
+  padding-top: 1.25rem;
 `;
 
 export const TitleWrapper = styled.div`
