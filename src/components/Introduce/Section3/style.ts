@@ -46,7 +46,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   gap: 5rem;
 
-  padding-top: calc(40vh + 200px);
+  padding-top: calc(40vh + 15.625rem);
   z-index: 1;
 `;
 

@@ -69,7 +69,7 @@ const Section3: React.FC<Props> = ({ forwardRef }) => {
       </S.TitleWrapper>
       <S.ContentWrapper ref={targetRef}>
         <S.Content id="content1">
-          <S.ContentHead color="pink">
+          <S.ContentHead color="rgb(253, 149, 149)">
             <S.ContentTitle>함께 어울리는 분위기</S.ContentTitle>
           </S.ContentHead>
           <S.ContentDescription>
@@ -78,7 +78,7 @@ const Section3: React.FC<Props> = ({ forwardRef }) => {
           </S.ContentDescription>
         </S.Content>
         <S.Content id="content2">
-          <S.ContentHead color="pink">
+          <S.ContentHead color="rgb(251, 172, 172)">
             <S.ContentTitle>회원간에 인사잘하기</S.ContentTitle>
           </S.ContentHead>
           <S.ContentDescription>
@@ -87,7 +87,7 @@ const Section3: React.FC<Props> = ({ forwardRef }) => {
           </S.ContentDescription>
         </S.Content>
         <S.Content id="content3">
-          <S.ContentHead color="pink">
+          <S.ContentHead color="rgb(250, 208, 208)">
             <S.ContentTitle>클럽 회원 우대</S.ContentTitle>
           </S.ContentHead>
           <S.ContentDescription>
