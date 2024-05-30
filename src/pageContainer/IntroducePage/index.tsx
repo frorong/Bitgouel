@@ -2,13 +2,13 @@
 
 import * as S from "./style";
 
-import { Section1, Section2, Section3 } from "@/components/Introduce";
+import { Section1, Section2, Section3, Section4 } from "@/components/Introduce";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +40,7 @@ const IntroducePage = () => {
       <Section1 forwardRef={(el: any) => (sectionsRef.current[0] = el)} />
       <Section2 forwardRef={(el: any) => (sectionsRef.current[1] = el)} />
       <Section3 forwardRef={(el: any) => (sectionsRef.current[2] = el)} />
+      <Section4 forwardRef={(el: any) => (sectionsRef.current[3] = el)} />
     </S.IntroduceWrapper>
   );
 };
