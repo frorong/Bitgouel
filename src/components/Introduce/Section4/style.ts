@@ -7,6 +7,20 @@ export const Section = styled.section`
 
   min-width: 100vw;
   height: 100vh;
+  position: relative;
+`;
 
-  background-color: yellow;
+export const Half = styled.div`
+  position: absolute;
+
+  top: 0;
+  width: 100vw;
+  height: 50vh;
+  border-radius: 0 0 40% 0;
+
+  background: linear-gradient(
+    to right,
+    ${({ theme }) => theme.color.secondary},
+    ${({ theme }) => theme.color.white}
+  );
 `;
