@@ -15,7 +15,7 @@ const Section1: React.FC<Props> = ({ forwardRef }) => (
     </S.ImageWrapper>
     <S.TitleWrapper>
       <S.Title>빛고을 배드민턴 클럽에</S.Title>
-      <S.Title>오신 것을 환영합니다.</S.Title>
+      <S.Title>오신 것을 환영해요!!</S.Title>
     </S.TitleWrapper>
   </S.Section>
 );
