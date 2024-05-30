@@ -4,8 +4,12 @@ import * as S from "./style";
 
 import Image from "next/image";
 
-const Section1 = () => (
-  <S.Section>
+interface Props {
+  forwardRef?: any;
+}
+
+const Section1: React.FC<Props> = ({ forwardRef }) => (
+  <S.Section ref={forwardRef}>
     <S.ImageWrapper>
       <Image fill src="/Introduce/test3.png" alt="cover" />
     </S.ImageWrapper>

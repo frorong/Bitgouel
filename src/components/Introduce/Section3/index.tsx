@@ -2,6 +2,12 @@
 
 import * as S from "./style";
 
-const Section3 = () => <S.Section></S.Section>;
+interface Props {
+  forwardRef?: any;
+}
+
+const Section3: React.FC<Props> = ({ forwardRef }) => (
+  <S.Section ref={forwardRef}></S.Section>
+);
 
 export default Section3;
