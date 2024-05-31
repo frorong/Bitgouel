@@ -1,4 +1,4 @@
-// Section2.tsx
+"use client";
 
 import * as S from "./style";
 import Image from "next/image";
@@ -26,48 +26,28 @@ const Awards = [
 
 const Section2: React.FC<Props> = ({ forwardRef }) => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-
   useEffect(() => {
     const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
 
-    const initialPositions = cards.map((card, index) => ({
-      left: index * 200,
-      rotation: index === 1 ? 0 : (index - 1) * 45,
-      zIndex: index === 1 ? 1 : 0,
-      scale: index === 1 ? 1.2 : 1,
-    }));
-
-    cards.forEach((card, index) => {
-      gsap.set(card, initialPositions[index]);
-    });
-
     const rotateCards = () => {
-      const currentPositions = cards.map((card) => ({
-        left: gsap.getProperty(card, "left"),
-        rotation: gsap.getProperty(card, "rotation"),
-        zIndex: gsap.getProperty(card, "zIndex"),
-        scale: gsap.getProperty(card, "scale"),
-      }));
-
-      const newPositions = [
-        currentPositions[2],
-        currentPositions[0],
-        currentPositions[1],
-      ];
-
-      cards.forEach((card, index) => {
-        gsap.to(card, {
-          left: newPositions[index].left,
-          rotation: newPositions[index].rotation,
-          zIndex: newPositions[index].zIndex,
-          scale: newPositions[index].scale,
-          duration: 0.5,
-          ease: "power2.inOut",
-        });
+      gsap.to(cards, {
+        rotationY: "+=360",
+        scale: (index) => (index === 1 ? 1.2 : 1),
+        filter: (index) => `brightness(${index === 1 ? 100 : 60}%)`,
+        duration: 1,
+        ease: "power2.inOut",
+        onComplete: () => {
+          const firstCard = cards.shift();
+          if (firstCard) {
+            cards.push(firstCard);
+            gsap.set(cards, { zIndex: (index) => (index === 1 ? 1 : 0) });
+          }
+        },
       });
     };
 
-    const intervalId = setInterval(rotateCards, 2000);
+    rotateCards();
+    const intervalId = setInterval(rotateCards, 5000);
 
     return () => {
       clearInterval(intervalId);

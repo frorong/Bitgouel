@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 80px;
 
   width: 100%;
   margin-top: 40px;
@@ -64,6 +64,7 @@ export const Content = styled.div`
 
   box-shadow: 0.5375rem 0.5375rem 3.125rem silver;
   background-color: ${({ theme }) => theme.color.white};
+  fill: brightness(100);
 
   #medal {
     margin: 2rem;
