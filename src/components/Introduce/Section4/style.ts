@@ -72,20 +72,17 @@ export const DownloadButton = styled.a`
 
 export const Trigger = styled.div`
   position: absolute;
-  width: 400px;
-  height: 400px;
-  z-index: 2;
+  width: 25rem;
+  height: 25rem;
   top: 0;
   right: 0;
-
-  background-color: red;
 `;
 
 export const CockWrapper = styled.div`
   position: absolute;
-  top: -300px;
-  right: -300px;
+  top: -18.75rem;
+  right: -18.75rem;
   z-index: 2;
 
-  transform: rotate(110deg);
+  transform: rotate(140deg);
 `;
