@@ -1,63 +1,79 @@
-"use client";
+// Section2.tsx
 
 import * as S from "./style";
-
 import Image from "next/image";
-
-import { useTheme } from "@emotion/react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 interface Props {
-  forwardRef?: any;
+  forwardRef?: React.Ref<HTMLDivElement>;
 }
 
 const Awards = [
   {
-    title: "홍길동",
-    grade: "",
+    title: "종합 우승",
+    grade: "1",
   },
   {
-    title: "홍길동",
-    grade: "",
+    title: "종합 준우승",
+    grade: "2",
   },
   {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
-  },
-  {
-    title: "홍길동",
-    grade: "",
+    title: "종합 3위",
+    grade: "3",
   },
 ] as const;
 
 const Section2: React.FC<Props> = ({ forwardRef }) => {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
+
+    const initialPositions = cards.map((card, index) => ({
+      left: index * 200,
+      rotation: index === 1 ? 0 : (index - 1) * 45,
+      zIndex: index === 1 ? 1 : 0,
+      scale: index === 1 ? 1.2 : 1,
+    }));
+
+    cards.forEach((card, index) => {
+      gsap.set(card, initialPositions[index]);
+    });
+
+    const rotateCards = () => {
+      const currentPositions = cards.map((card) => ({
+        left: gsap.getProperty(card, "left"),
+        rotation: gsap.getProperty(card, "rotation"),
+        zIndex: gsap.getProperty(card, "zIndex"),
+        scale: gsap.getProperty(card, "scale"),
+      }));
+
+      const newPositions = [
+        currentPositions[2],
+        currentPositions[0],
+        currentPositions[1],
+      ];
+
+      cards.forEach((card, index) => {
+        gsap.to(card, {
+          left: newPositions[index].left,
+          rotation: newPositions[index].rotation,
+          zIndex: newPositions[index].zIndex,
+          scale: newPositions[index].scale,
+          duration: 0.5,
+          ease: "power2.inOut",
+        });
+      });
+    };
+
+    const intervalId = setInterval(rotateCards, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
   return (
     <S.Section ref={forwardRef}>
       <S.Wrapper>
@@ -74,34 +90,29 @@ const Section2: React.FC<Props> = ({ forwardRef }) => {
               자부심을 고취시켰습니다.
             </S.Caption>
           </S.DescriptionWrapper>
-          <S.Content>
-            <S.ContentHead color="mint">
-              <S.ContentTitle>종합 우승</S.ContentTitle>
-              <Image src="/main/badminton2.png" alt="" fill />
-            </S.ContentHead>
-            <Image
-              id="medal"
-              alt="medal"
-              src="/medal/medal1.webp"
-              width={80}
-              height={80}
-            />
-            <S.ContentDescription>첨단 미르치과대회</S.ContentDescription>
-          </S.Content>
-          <S.Content>
-            <S.ContentHead color="mint">
-              <S.ContentTitle>종합 우승</S.ContentTitle>
-              <Image src="/main/badminton1.png" alt="" fill />
-            </S.ContentHead>
-            <Image
-              id="medal"
-              alt="medal"
-              src="/medal/medal2.webp"
-              width={80}
-              height={80}
-            />
-            <S.ContentDescription>첨단 미르치과대회</S.ContentDescription>
-          </S.Content>
+
+          {Awards.map((award, i) => (
+            <S.Content
+              key={i}
+              ref={(el) => {
+                if (el) cardRefs.current[i] = el;
+              }}
+              color="mint"
+            >
+              <S.ContentHead color="mint">
+                <S.ContentTitle>{award.title}</S.ContentTitle>
+                <Image src={`/main/badminton${(i % 2) + 1}.png`} alt="" fill />
+              </S.ContentHead>
+              <Image
+                id="medal"
+                alt="medal"
+                src={`/medal/medal${award.grade}.webp`}
+                width={80}
+                height={80}
+              />
+              <S.ContentDescription>첨단 미르치과대회</S.ContentDescription>
+            </S.Content>
+          ))}
         </S.ContentWrapper>
       </S.Wrapper>
     </S.Section>

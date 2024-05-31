@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
 
   width: 100vw;
 
-  padding: 6.25rem;
+  padding: 6.25rem 0 6.25rem 6.25rem;
 `;
 
 export const ContentWrapper = styled.div`
@@ -31,7 +31,6 @@ export const ContentWrapper = styled.div`
   gap: 20px;
 
   width: 100%;
-  overflow-x: hidden;
   margin-top: 40px;
 `;
 
@@ -91,11 +90,16 @@ export const ContentHead = styled.div<{ color: string }>`
 `;
 
 export const ContentTitle = styled.span`
+  display: flex;
+  justify-content: center;
+
+  z-index: 1;
+  width: 250px;
+
   ${({ theme }) => theme.typo.h3};
   color: ${({ theme }) => theme.color.black};
   -webkit-text-stroke: 0.063rem ${({ theme }) => theme.color.white};
   font-weight: 800;
-  z-index: 1;
 `;
 
 export const ContentDescription = styled.span`
