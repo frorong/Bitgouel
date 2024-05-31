@@ -1,7 +1,8 @@
 "use client";
 
-import * as S from "./style";
 import { useEffect, useRef } from "react";
+
+import * as S from "./style";
 import { gsap } from "gsap";
 import { useIntersectionObserver } from "@/hooks";
 

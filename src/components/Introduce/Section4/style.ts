@@ -41,23 +41,51 @@ export const Title = styled.span`
 export const TelWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 
   z-index: 1;
   width: 100vw;
-  padding-left: 100px;
+  padding-left: 6.25rem;
 
   padding-top: calc(50vh);
 `;
 
-export const TelContent = styled.div`
-  display: flex;
-  gap: 20px;
-  align-items: center;
-`;
-
 export const TelText = styled.span`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: ${({ theme }) => theme.color.grey[900]};
+`;
+
+export const DownloadButton = styled.a`
+  width: fit-content;
+  padding: 1.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: ${({ theme }) => theme.color.secondary};
+
+  transition: ease-in-out 0.2s;
+
+  :hover {
+    background-color: ${({ theme }) => theme.color.primary};
+    box-shadow: 0.5375rem 0.5375rem 3.125rem silver;
+  }
+`;
+
+export const Trigger = styled.div`
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 2;
+  top: 0;
+  right: 0;
+
+  background-color: red;
+`;
+
+export const CockWrapper = styled.div`
+  position: absolute;
+  top: -300px;
+  right: -300px;
+  z-index: 2;
+
+  transform: rotate(110deg);
 `;
