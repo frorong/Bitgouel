@@ -1,11 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-
-import { gsap } from "gsap";
-
 import * as S from "./style";
-import { useIntersectionObserver } from "@/hooks";
 import { Video } from "@/components";
 
 interface Props {
@@ -13,96 +8,39 @@ interface Props {
 }
 
 const Section3: React.FC<Props> = ({ forwardRef }) => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-
-  const moveElements = (isUp: boolean) => {
-    gsap.to("#content1", {
-      scrollTrigger: "#content1",
-      y: isUp ? -400 : 0,
-      duration: 4,
-    });
-
-    gsap.to("#content2", {
-      scrollTrigger: "#content2",
-      y: isUp ? -300 : 0,
-      duration: 4,
-    });
-
-    gsap.to("#content3", {
-      scrollTrigger: "#content3",
-      y: isUp ? -200 : 0,
-      duration: 4,
-    });
-  };
-
-  const handleIntersection: IntersectionObserverCallback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        moveElements(true);
-      } else {
-        moveElements(false);
-      }
-    });
-  };
-
-  const { observe, unobserve } = useIntersectionObserver(handleIntersection, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    const target = targetRef.current;
-    if (target) {
-      observe(target);
-    }
-
-    return () => {
-      if (target) {
-        unobserve(target);
-      }
-    };
-  }, [observe, unobserve]);
-
   return (
     <S.Section ref={forwardRef}>
       <S.Half />
       <S.TitleWrapper>
-        <S.Title>빛고을 배드민턴 클럽은 이런 가치를 추구해요!</S.Title>
+        <S.Title>" 최고의 실력과 조직력 "</S.Title>
+
+        <S.DescriptionWrapper>
+          <S.Description>
+            빛고을 배드민턴 클럽은 조직력을 상당히 중요히 생각합니다.
+          </S.Description>
+          <S.Description>
+            끈끈한 조직력에서 최고의 실력과 인성을 가진 선수들이 탄생하죠.
+          </S.Description>
+          <S.Caption>
+            빛고을 배드민턴 클럽은 조직력을 핵심으로 삼습니다. 체계적인 운영으로
+            우수한 선수들을 발굴하고, 우수한 실력과 인성을 함께 가르칩니다.
+            공정하고 투명한 운영으로 모든 선수들에게 기회를 제공하며, 함께
+            나아가는 공동체로서의 정신을 강조합니다.
+          </S.Caption>
+        </S.DescriptionWrapper>
       </S.TitleWrapper>
 
       <S.VideoWrapper>
         <Video source="/video/section1.mp4" />
       </S.VideoWrapper>
-      <S.ContentWrapper ref={targetRef}>
-        <S.Content id="content1">
-          <S.ContentHead color="rgb(253, 149, 149)">
-            <S.ContentTitle>함께 어울리는 분위기</S.ContentTitle>
-          </S.ContentHead>
-          <S.ContentDescription>
-            운동와서 게임못하고 있는 회원이 있으면 같이 어울려서 게임할수 있도록
-            주위에서 같이 이끌어주시고 소외되는 부분이 없도록 협조부탁드립니다.
-          </S.ContentDescription>
-        </S.Content>
-        <S.Content id="content2">
-          <S.ContentHead color="rgb(251, 172, 172)">
-            <S.ContentTitle>회원간에 인사잘하기</S.ContentTitle>
-          </S.ContentHead>
-          <S.ContentDescription>
-            인사는 인간관계의 시작이자 기본입니다. 밝은 인사를 통해 긍정적인
-            이미지를 쌓아갈 수 있고 상호 관계도 더욱 돈독해질 수 있습니다.
-          </S.ContentDescription>
-        </S.Content>
-        <S.Content id="content3">
-          <S.ContentHead color="rgb(250, 208, 208)">
-            <S.ContentTitle>클럽 회원 우대</S.ContentTitle>
-          </S.ContentHead>
-          <S.ContentDescription>
-            외부인 방문시 클럽회원이 많은경우 외부인은 가급적 4.5.6 코트에서
-            게임하도록 유도 부탁 드립니다.
-          </S.ContentDescription>
-        </S.Content>
-      </S.ContentWrapper>
+
+      <S.MindWrapper>
+        <S.MindTitle>빛고을 철학</S.MindTitle>
+        <S.MidWrapper>
+          <S.Mid id="mid" />
+        </S.MidWrapper>
+        <S.MidDes>가족같은 분위기와 협력으로 일상에 가치를 더한다.</S.MidDes>
+      </S.MindWrapper>
     </S.Section>
   );
 };

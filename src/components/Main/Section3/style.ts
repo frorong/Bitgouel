@@ -26,7 +26,7 @@ export const Half = styled.div`
 export const Title = styled.span`
   font-size: 3.75rem;
   font-weight: 700;
-  color: ${({ theme }) => theme.color.grey[900]};
+  color: ${({ theme }) => theme.color.white};
 `;
 
 export const TitleWrapper = styled.div`
@@ -42,50 +42,24 @@ export const TitleWrapper = styled.div`
   padding-top: 6.25rem;
 `;
 
-export const ContentWrapper = styled.div`
-  display: flex;
-  gap: 5rem;
-
-  padding-top: calc(40vh + 15.625rem);
-  z-index: 1;
-`;
-
-export const Content = styled.div`
+export const DescriptionWrapper = styled.div`
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  width: 25rem;
-  height: 25rem;
-
-  border-radius: 50%;
-
-  overflow: hidden;
-
-  box-shadow: 0.9375rem 0.9375rem 3.125rem silver;
-  background-color: ${({ theme }) => theme.color.white};
+  gap: 20px;
 `;
 
-export const ContentHead = styled.div<{ color: string }>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 25rem;
-  height: 6.25rem;
-  padding-top: 1.25rem;
-  background-color: ${({ color }) => color};
+export const Description = styled.span`
+  ${({ theme }) => theme.typo.h3};
+  color: ${({ theme }) => theme.color.grey[200]};
 `;
 
-export const ContentTitle = styled.span`
-  ${({ theme }) => theme.typo.h4};
-  ${({ theme }) => theme.color.grey[900]};
-`;
-
-export const ContentDescription = styled.span`
-  ${({ theme }) => theme.typo.subtitle};
-  ${({ theme }) => theme.color.grey[900]};
-  padding: 2.5rem;
+export const Caption = styled.span`
+  width: 600px;
+  word-break: keep-all;
+  ${({ theme }) => theme.typo.body1};
+  color: ${({ theme }) => theme.color.white};
   text-align: center;
 `;
 
@@ -94,4 +68,47 @@ export const VideoWrapper = styled.div`
   height: 600px;
 
   position: relative;
+  filter: brightness(30%);
+`;
+
+export const MindWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #f5f7fb;
+  width: 100vw;
+  height: 100%;
+
+  :hover {
+    #mid {
+      background-color: ${({ theme }) => theme.color.primary};
+    }
+  }
+`;
+
+export const MindTitle = styled(Description)`
+  margin-top: 50px;
+  color: ${({ theme }) => theme.color.grey[900]};
+`;
+
+export const Mid = styled.div`
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #f5f7fb;
+
+  transition: ease-in-out 0.2s;
+`;
+
+export const MidWrapper = styled.div`
+  position: relative;
+  height: 20px;
+  margin: 25px 0;
+`;
+
+export const MidDes = styled(Caption)`
+  ${({ theme }) => theme.typo.subtitle};
+  color: ${({ theme }) => theme.color.grey[600]};
 `;
