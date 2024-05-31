@@ -13,3 +13,8 @@ export const Title = styled.h1`
   ${({ theme }) => theme.typo.h4};
   color: ${({ theme }) => theme.color.grey[900]};
 `;
+
+export const Caption = styled.p`
+  ${({ theme }) => theme.typo.caption};
+  color: ${({ theme }) => theme.color.grey[500]};
+`;

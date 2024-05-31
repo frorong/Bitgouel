@@ -7,16 +7,16 @@ import { HeaderItem } from "@/components";
 
 const Routes = [
   {
+    name: "클럽소개",
+    path: "/introduce",
+  },
+  {
     name: "공지사항",
     path: "/notice",
   },
   {
     name: "행사갤러리",
     path: "/gallery",
-  },
-  {
-    name: "임시헤더2",
-    path: "/notice",
   },
   {
     name: "문의하기",

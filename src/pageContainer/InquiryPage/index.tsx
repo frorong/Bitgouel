@@ -87,6 +87,13 @@ const InquiryPage = () => {
         forwardedRef={dialog}
         onClick={handleSubmitDialog}
       />
+      <S.Caption>
+        악의적이거나 반복적인 문의는 관련 법률에 따라 처벌받을 수 있습니다.
+      </S.Caption>
+      <S.Caption>
+        - 정보통신망 이용촉진 및 정보보호 등에 관한 법률 제50조
+      </S.Caption>
+      <S.Caption>- 형법 제314조</S.Caption>
     </S.Container>
   );
 };
