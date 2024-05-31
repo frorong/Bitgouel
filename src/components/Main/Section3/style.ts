@@ -88,3 +88,10 @@ export const ContentDescription = styled.span`
   padding: 2.5rem;
   text-align: center;
 `;
+
+export const VideoWrapper = styled.div`
+  width: 100vw;
+  height: 600px;
+
+  position: relative;
+`;

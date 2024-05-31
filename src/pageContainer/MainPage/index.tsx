@@ -45,5 +45,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
-// const MainPage = () => <Banner />;

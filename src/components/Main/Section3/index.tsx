@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from "react";
 
-import * as S from "./style";
 import { gsap } from "gsap";
+
+import * as S from "./style";
 import { useIntersectionObserver } from "@/hooks";
+import { Video } from "@/components";
 
 interface Props {
   forwardRef?: any;
@@ -68,6 +70,10 @@ const Section3: React.FC<Props> = ({ forwardRef }) => {
       <S.TitleWrapper>
         <S.Title>빛고을 배드민턴 클럽은 이런 가치를 추구해요!</S.Title>
       </S.TitleWrapper>
+
+      <S.VideoWrapper>
+        <Video source="/video/section1.mp4" />
+      </S.VideoWrapper>
       <S.ContentWrapper ref={targetRef}>
         <S.Content id="content1">
           <S.ContentHead color="rgb(253, 149, 149)">

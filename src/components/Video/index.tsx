@@ -1,9 +1,14 @@
+"use client";
+
 import styled from "@emotion/styled";
 
-const Video = () => (
+interface Props {
+  source: string;
+}
+
+const Video: React.FC<Props> = ({ source }) => (
   <VideoStyled poster="/video/poster.png" autoPlay loop muted playsInline>
-    <source src="/video/promotion.webm" type="video/webm" />
-    <source src="/video/promotion.mp4" type="video/mp4" />
+    <source src={source} type="video/mp4" />
   </VideoStyled>
 );
 
