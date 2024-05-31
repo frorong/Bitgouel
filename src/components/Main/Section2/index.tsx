@@ -13,14 +13,17 @@ const Awards = [
   {
     title: "종합 우승",
     grade: "1",
+    name: "제 26회 광산구청장기",
   },
   {
     title: "종합 준우승",
     grade: "2",
+    name: "제 16회 첨단미르치과병원배",
   },
   {
-    title: "종합 3위",
-    grade: "3",
+    title: "종합 우승",
+    grade: "1",
+    name: "제15회 첨단미르치과병원배",
   },
 ] as const;
 
@@ -31,7 +34,7 @@ const Section2: React.FC<Props> = ({ forwardRef }) => {
 
     const rotateCards = () => {
       gsap.to(cards, {
-        rotationY: "+=360",
+        rotationY: (index) => `+=${index === 1 ? 360 : 0}`,
         scale: (index) => (index === 1 ? 1.2 : 1),
         filter: (index) => `brightness(${index === 1 ? 100 : 60}%)`,
         duration: 1,
@@ -58,15 +61,15 @@ const Section2: React.FC<Props> = ({ forwardRef }) => {
     <S.Section ref={forwardRef}>
       <S.Wrapper>
         <S.Title>빛고을 배드민턴 클럽은</S.Title>
-        <S.Title>적극적으로 대회에 참여해요!</S.Title>
+        <S.Title>대회에서 우수한 성적을 거두어요!</S.Title>
         <S.ContentWrapper>
           <S.DescriptionWrapper>
             <S.Description>최강 빛고을이 거둔</S.Description>
-            <S.Description>역대 성적들</S.Description>
+            <S.Description>최근 성적들</S.Description>
             <S.Caption>
               빛고을 클럽은 여러 대회에 출전하여 눈부신 성과를 거두며, 클럽의
-              위상을 한층 더 높였습니다. 지금까지 클럽은 여러 대회에서 다음과
-              같은 훌륭한 성적을 거두었으며, 빛고을의 이름을 널리 알리고
+              위상을 한층 더 높였습니다. 빛고을 배드민턴 클럽은 여러 대회에서
+              다음과 같은 훌륭한 성적을 거두었으며, 빛고을의 이름을 널리 알리고
               자부심을 고취시켰습니다.
             </S.Caption>
           </S.DescriptionWrapper>
@@ -90,7 +93,7 @@ const Section2: React.FC<Props> = ({ forwardRef }) => {
                 width={80}
                 height={80}
               />
-              <S.ContentDescription>첨단 미르치과대회</S.ContentDescription>
+              <S.ContentDescription>{award.name}</S.ContentDescription>
             </S.Content>
           ))}
         </S.ContentWrapper>
