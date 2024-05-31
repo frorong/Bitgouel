@@ -10,31 +10,11 @@ export const Section = styled.section`
   position: relative;
 `;
 
-export const Half = styled.div`
-  position: absolute;
-
-  top: 0;
-  width: 100vw;
-  height: 50vh;
-  border-radius: 0 0 40% 0;
-
-  background: linear-gradient(
-      to right,
-      ${({ theme }) => theme.color.secondary},
-      rgba(251, 226, 222, 0)
-    ),
-    url("/Introduce/cover.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-`;
-
 export const Title = styled.span`
   font-size: 3.75rem;
   font-weight: 700;
   color: ${({ theme }) => theme.color.grey[900]};
 
-  margin-top: 1.25rem;
   z-index: 1;
 `;
 
@@ -68,21 +48,4 @@ export const DownloadButton = styled.a`
     background-color: ${({ theme }) => theme.color.primary};
     box-shadow: 0.5375rem 0.5375rem 3.125rem silver;
   }
-`;
-
-export const Trigger = styled.div`
-  position: absolute;
-  width: 25rem;
-  height: 25rem;
-  top: 0;
-  right: 0;
-`;
-
-export const CockWrapper = styled.div`
-  position: absolute;
-  top: -18.75rem;
-  right: -18.75rem;
-  z-index: 2;
-
-  transform: rotate(140deg);
 `;
