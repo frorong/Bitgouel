@@ -36,16 +36,10 @@ export const TelText = styled.span`
   color: ${({ theme }) => theme.color.grey[900]};
 `;
 
-export const DownloadButton = styled.a`
-  width: fit-content;
-  padding: 1.25rem 0.5rem;
-  border-radius: 0.5rem;
-  background-color: ${({ theme }) => theme.color.secondary};
+export const MapWrapper = styled.div`
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
 
-  transition: ease-in-out 0.2s;
-
-  :hover {
-    background-color: ${({ theme }) => theme.color.primary};
-    box-shadow: 0.5375rem 0.5375rem 3.125rem silver;
-  }
+  position: relative;
 `;
