@@ -29,17 +29,46 @@ export const TelWrapper = styled.div`
   padding: 6.25rem;
 `;
 
-export const TelText = styled.span`
-  font-size: 2rem;
-  font-weight: 700;
+export const Text = styled.span`
+  ${({ theme }) => theme.typo.subtitle};
   color: ${({ theme }) => theme.color.grey[900]};
 `;
 
 export const MapWrapper = styled.div`
-  width: 800px;
+  min-width: 800px;
   height: 500px;
   overflow: hidden;
 
   position: relative;
   border-radius: 10px;
+`;
+
+export const ImageMap = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+export const ImageWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+
+  img {
+    object-fit: cover;
+  }
+`;
+
+export const GoToMap = styled.a`
+  ${({ theme }) => theme.typo.subtitle};
+  color: ${({ theme }) => theme.color.grey[900]};
+
+  transition: ease-in-out 0.2s;
+  width: fit-content;
+
+  :hover {
+    color: ${({ theme }) => theme.color.primary};
+  }
 `;

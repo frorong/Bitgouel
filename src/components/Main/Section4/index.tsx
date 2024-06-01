@@ -2,8 +2,6 @@
 
 import * as S from "./style";
 
-import { useEffect, useRef } from "react";
-
 import Image from "next/image";
 
 import { OpenLayersMap } from "@/components";
@@ -16,13 +14,20 @@ const Section4: React.FC<Props> = ({ forwardRef }) => {
   return (
     <S.Section ref={forwardRef}>
       <S.TelWrapper>
-        <S.Title>찾아오시는길.</S.Title>
-        <S.MapWrapper>
-          <OpenLayersMap />
-        </S.MapWrapper>
+        <S.Title>찾아오시는 길.</S.Title>
+        <S.ImageMap>
+          <S.MapWrapper>
+            <OpenLayersMap />
+          </S.MapWrapper>
+          <S.ImageWrapper>
+            <Image src="/main/outside.jpeg" alt="" fill />
+          </S.ImageWrapper>
+        </S.ImageMap>
 
-        <S.TelText>총무님: 010-1234-5678</S.TelText>
-        <S.TelText>회장님: 010-1234-5678</S.TelText>
+        <S.GoToMap href="https://maps.app.goo.gl/r1ZY6WPgjeYQFQT69">
+          -&gt; 지도 앱에서 보기
+        </S.GoToMap>
+        <S.Text>주소: 광주광역시 광산구 무진대로211번길 28</S.Text>
       </S.TelWrapper>
     </S.Section>
   );
