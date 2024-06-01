@@ -13,7 +13,7 @@ import { Point } from "ol/geom";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
 
-const ADDRESS = [37.5664056, 126.9778222] as const;
+const ADDRESS = [35.1637435, 126.8046193] as const;
 const ZOOM_LEVEL = 16 as const;
 
 const useAddPoint = (location: [number, number], map: Map) => {

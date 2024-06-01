@@ -11,7 +11,7 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.span`
-  font-size: 3.75rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: ${({ theme }) => theme.color.grey[900]};
 
@@ -25,9 +25,8 @@ export const TelWrapper = styled.div`
 
   z-index: 1;
   width: 100vw;
-  padding-left: 6.25rem;
 
-  padding-top: calc(50vh);
+  padding: 6.25rem;
 `;
 
 export const TelText = styled.span`
@@ -42,4 +41,5 @@ export const MapWrapper = styled.div`
   overflow: hidden;
 
   position: relative;
+  border-radius: 10px;
 `;

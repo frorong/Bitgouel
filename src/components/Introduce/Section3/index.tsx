@@ -75,7 +75,8 @@ const Section3: React.FC<Props> = ({ forwardRef }) => {
           </S.ContentHead>
           <S.ContentDescription>
             운동와서 게임못하고 있는 회원이 있으면 같이 어울려서 게임할수 있도록
-            주위에서 같이 이끌어주시고 소외되는 부분이 없도록 협조부탁드립니다.
+            주위에서 같이 이끌어주시고 소외되는 부분이 없이 모든 회원이 화합이
+            잘됩니다.
           </S.ContentDescription>
         </S.Content>
         <S.Content id="content2">
