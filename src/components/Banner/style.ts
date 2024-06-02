@@ -63,6 +63,29 @@ export const BannerTitleWrapper = styled.div`
   font-weight: 700;
   color: ${({ theme }) => theme.color.white};
   text-shadow: 3px 3px ${({ theme }) => theme.color.black};
+
+  word-break: break-all;
+
+  @media (max-width: 1260px) {
+    display: grid;
+    padding: 0 100px;
+    grid-template-columns: repeat(auto-fill, minmax(86.43px, auto));
+
+    height: fit-content;
+    margin-top: 100px;
+  }
+
+  @media (max-width: 880px) {
+    font-size: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(56px, auto));
+    padding: 0 60px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(56px, auto));
+    padding: 0 20px;
+  }
 `;
 
 export const AnimatedChar = styled.span`
@@ -71,6 +94,8 @@ export const AnimatedChar = styled.span`
   display: inline-block;
   animation: bounce 2s;
   animation-fill-mode: forwards;
+
+  max-width: 86.43px;
 
   @keyframes bounce {
     0%,
