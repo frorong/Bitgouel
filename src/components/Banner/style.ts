@@ -82,8 +82,6 @@ export const BannerTitleWrapper = styled.div`
   }
 
   @media (max-width: 600px) {
-    font-size: 4rem;
-    grid-template-columns: repeat(auto-fill, minmax(56px, auto));
     padding: 0 20px;
   }
 `;

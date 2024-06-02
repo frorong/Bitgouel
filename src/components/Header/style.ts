@@ -9,6 +9,15 @@ export const Wrapper = styled.header`
   width: 100vw;
   height: 5.5rem;
   padding: 0 6.25rem;
+
+  @media (max-width: 880px) {
+    /* font-size: 4rem; */
+    padding: 0 60px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 
 export const TitleWrapper = styled(Link)`

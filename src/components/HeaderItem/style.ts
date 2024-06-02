@@ -20,6 +20,15 @@ export const Wrapper = styled(Link)`
       color: ${({ theme }) => theme.color.secondary};
     }
   }
+
+  @media (max-width: 1260px) {
+    width: fit-content;
+    margin: 0 0.75rem;
+  }
+
+  @media (max-width: 880px) {
+    margin: 0 0.5rem;
+  }
 `;
 
 export const ItemTitle = styled.span`
