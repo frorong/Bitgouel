@@ -15,8 +15,6 @@ export const Container = styled.div`
 
   width: 100vw;
   height: calc(100vh / 3);
-
-  border: solid 1px black;
 `;
 
 export const Content = styled.div`

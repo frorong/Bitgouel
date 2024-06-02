@@ -1,4 +1,8 @@
+/** @jsxImportSource @emotion/react */
+
 "use client";
+
+import { css } from "@emotion/react";
 
 import * as S from "./style";
 
@@ -10,14 +14,11 @@ interface Props {
 
 const Section0: React.FC<Props> = ({ forwardRef }) => (
   <S.Section ref={forwardRef}>
-    {/* <S.ImageWrapper>
-      <Image src={"/Introduce/section1.png"} alt="cover" fill />
-    </S.ImageWrapper>
-    <S.TitleWrapper>
-      <S.Title>빛고을 배드민턴 클럽에</S.Title>
-      <S.Title>오신 것을 환영해요!!</S.Title>
-    </S.TitleWrapper> */}
-    <S.Container>
+    <S.Container
+      css={css`
+        background: linear-gradient(to bottom, white, #f1f8ff);
+      `}
+    >
       <S.Content>
         <S.ImageWrapper>
           <Image src="/Introduce/good1.png" fill alt="good1" />
@@ -39,7 +40,11 @@ const Section0: React.FC<Props> = ({ forwardRef }) => (
         </S.TextWrapper>
       </S.Content>
     </S.Container>
-    <S.Container>
+    <S.Container
+      css={css`
+        background: linear-gradient(to bottom, white, #f1fff5);
+      `}
+    >
       <S.Content>
         <S.ImageWrapper>
           <Image src="/Introduce/good2.png" fill alt="good2" />
@@ -63,7 +68,11 @@ const Section0: React.FC<Props> = ({ forwardRef }) => (
         </S.TextWrapper>
       </S.Content>
     </S.Container>
-    <S.Container>
+    <S.Container
+      css={css`
+        background: linear-gradient(to bottom, white, #f1f8f9);
+      `}
+    >
       <S.Content>
         <S.ImageWrapper>
           <Image src="/Introduce/good3.png" fill alt="good3" />
