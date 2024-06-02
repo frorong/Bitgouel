@@ -6,3 +6,5 @@ export { default as Input } from "./Input";
 export { default as Textarea } from "./Textarea";
 export { default as Button } from "./Button";
 export { default as CheckDialog } from "./CheckDialog";
+export { default as Video } from "./Video";
+export { default as OpenLayersMap } from "./OpenLayersMap";
