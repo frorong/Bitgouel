@@ -7,49 +7,33 @@ export const Section = styled.section`
 
   min-width: 100vw;
   height: 100vh;
-  padding-top: 1.25rem;
 `;
 
-export const TitleWrapper = styled.div`
+export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 
-  position: absolute;
-  z-index: 1;
   width: 100vw;
+  height: calc(100vh / 3);
 
-  animation: bounce 3s;
+  border: solid 1px black;
+`;
 
-  @keyframes bounce {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    50% {
-      opacity: 0.5;
-      transform: translateY(-2.25rem);
-    }
-  }
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 20px;
 `;
 
 export const Title = styled.span`
   font-size: 4.25rem;
   font-weight: 700;
-  color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.black};
   -webkit-text-stroke: 0.063rem ${({ theme }) => theme.color.grey[700]};
 `;
 
 export const ImageWrapper = styled.div`
-  mask-image: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 0) 70%
-  );
+  filter: brightness(70%);
   position: relative;
   overflow: hidden;
 
@@ -57,7 +41,7 @@ export const ImageWrapper = styled.div`
     object-fit: cover;
   }
 
-  width: 50rem;
-  height: 50rem;
-  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+  border-radius: 8px;
 `;
