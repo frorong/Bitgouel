@@ -28,6 +28,7 @@ const Section4: React.FC<Props> = ({ forwardRef }) => {
           -&gt; 지도 앱에서 보기
         </S.GoToMap>
         <S.Text>주소: 광주광역시 광산구 무진대로211번길 28</S.Text>
+        <S.Text>빛고을국민체육센터 4층</S.Text>
       </S.TelWrapper>
     </S.Section>
   );

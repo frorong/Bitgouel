@@ -21,6 +21,9 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   padding: 20px;
+
+  opacity: 0;
+  margin-top: 200px;
 `;
 
 export const TextWrapper = styled.div`
@@ -55,4 +58,14 @@ export const ImageWrapper = styled.div`
   width: 260px;
   height: 260px;
   border-radius: 8px;
+`;
+
+export const Trigger = styled.div`
+  z-index: -1;
+
+  width: 40vw;
+  height: 200px;
+
+  position: absolute;
+  right: 0;
 `;
