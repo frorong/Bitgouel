@@ -25,15 +25,28 @@ export const Content = styled.div`
   padding: 20px;
 `;
 
+export const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 260px;
+  padding: 0 20px;
+`;
+
 export const Title = styled.span`
-  font-size: 4.25rem;
-  font-weight: 700;
+  ${({ theme }) => theme.typo.h2};
   color: ${({ theme }) => theme.color.black};
-  -webkit-text-stroke: 0.063rem ${({ theme }) => theme.color.grey[700]};
+`;
+
+export const Description = styled.div`
+  ${({ theme }) => theme.typo.subtitle};
+  color: ${({ theme }) => theme.color.grey[700]};
+
+  word-break: keep-all;
 `;
 
 export const ImageWrapper = styled.div`
-  filter: brightness(70%);
   position: relative;
   overflow: hidden;
 
