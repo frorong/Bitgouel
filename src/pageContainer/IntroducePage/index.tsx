@@ -2,7 +2,13 @@
 
 import * as S from "./style";
 
-import { Section1, Section2, Section3, Section4 } from "@/components/Introduce";
+import {
+  Section0,
+  Section1,
+  Section2,
+  Section3,
+  Section4,
+} from "@/components/Introduce";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -38,9 +44,10 @@ const IntroducePage = () => {
   return (
     <S.IntroduceWrapper ref={containerRef} id="container">
       <Section1 forwardRef={(el: any) => (sectionsRef.current[0] = el)} />
-      <Section2 forwardRef={(el: any) => (sectionsRef.current[1] = el)} />
-      <Section3 forwardRef={(el: any) => (sectionsRef.current[2] = el)} />
-      <Section4 forwardRef={(el: any) => (sectionsRef.current[3] = el)} />
+      <Section0 forwardRef={(el: any) => (sectionsRef.current[1] = el)} />
+      <Section2 forwardRef={(el: any) => (sectionsRef.current[2] = el)} />
+      <Section3 forwardRef={(el: any) => (sectionsRef.current[3] = el)} />
+      <Section4 forwardRef={(el: any) => (sectionsRef.current[4] = el)} />
     </S.IntroduceWrapper>
   );
 };
