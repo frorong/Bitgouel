@@ -8,3 +8,4 @@ export { default as Button } from "./Button";
 export { default as CheckDialog } from "./CheckDialog";
 export { default as Video } from "./Video";
 export { default as OpenLayersMap } from "./OpenLayersMap";
+export { default as GoogleAnalytics } from "./GoogleAnalytics";
