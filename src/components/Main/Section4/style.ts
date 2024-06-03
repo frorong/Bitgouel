@@ -27,6 +27,14 @@ export const TelWrapper = styled.div`
   width: 100vw;
 
   padding: 6.25rem;
+
+  @media (max-width: 880px) {
+    padding: 60px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 
 export const Text = styled.span`
@@ -41,6 +49,14 @@ export const MapWrapper = styled.div`
 
   position: relative;
   border-radius: 10px;
+
+  @media (max-width: 1260px) {
+    min-width: 300px;
+  }
+
+  @media (max-width: 880px) {
+    min-width: 200px;
+  }
 `;
 
 export const ImageMap = styled.div`
@@ -58,6 +74,14 @@ export const ImageWrapper = styled.div`
 
   img {
     object-fit: cover;
+  }
+
+  @media (max-width: 1260px) {
+    min-width: 300px;
+  }
+
+  @media (max-width: 880px) {
+    min-width: 200px;
   }
 `;
 
