@@ -14,6 +14,10 @@ export const Title = styled.span`
   font-weight: 700;
   line-height: 4.6875rem;
   color: ${({ theme }) => theme.color.black};
+
+  @media (max-width: 880px) {
+    ${({ theme }) => theme.typo.h2};
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -24,6 +28,10 @@ export const Wrapper = styled.div`
   width: 100vw;
 
   padding: 6.25rem 0 6.25rem 6.25rem;
+
+  @media (max-width: 880px) {
+    padding: 60px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -32,6 +40,24 @@ export const ContentWrapper = styled.div`
 
   width: 100%;
   margin-top: 40px;
+
+  @media (max-width: 1736px) {
+    flex-direction: column;
+    gap: 8px;
+  }
+`;
+
+export const CardWrapper = styled.div`
+  display: flex;
+  gap: 80px;
+
+  @media (max-width: 1260px) {
+    gap: 40px;
+  }
+
+  @media (max-width: 660px) {
+    gap: 10px;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -50,6 +76,10 @@ export const Caption = styled.span`
   word-break: keep-all;
   ${({ theme }) => theme.typo.body1};
   color: ${({ theme }) => theme.color.black};
+
+  @media (max-width: 880px) {
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`
@@ -67,6 +97,19 @@ export const Content = styled.div`
 
   #medal {
     margin: 2rem;
+  }
+
+  @media (max-width: 1260px) {
+    width: 150px;
+    height: 210px;
+  }
+
+  @media (max-width: 1260px) {
+    #medal {
+      margin: 0.5rem;
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 
@@ -100,10 +143,19 @@ export const ContentTitle = styled.span`
   color: ${({ theme }) => theme.color.black};
   -webkit-text-stroke: 0.063rem ${({ theme }) => theme.color.white};
   font-weight: 800;
+
+  @media (max-width: 1260px) {
+    ${({ theme }) => theme.typo.h4};
+  }
 `;
 
 export const ContentDescription = styled.span`
   ${({ theme }) => theme.typo.subtitle};
   ${({ theme }) => theme.color.grey[900]};
   text-align: center;
+
+  @media (max-width: 1260px) {
+    padding: 0 8px;
+    ${({ theme }) => theme.typo.body1};
+  }
 `;
