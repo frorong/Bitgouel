@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: calc(100vw + 100px);
+  width: calc(100vw + 6.25rem);
 
   position: relative;
   overflow: hidden;
@@ -29,7 +29,7 @@ export const FadeInImage = styled.img`
 
   @keyframes slide {
     from {
-      transform: translateX(-100px);
+      transform: translateX(-6.25rem);
     }
     to {
       transform: translateX(0);
@@ -40,7 +40,7 @@ export const FadeInImage = styled.img`
   align-items: center;
   justify-content: center;
 
-  width: calc(100vw + 100px);
+  width: calc(100vw + 6.25rem);
   height: 100vh;
 
   object-fit: cover;
@@ -63,6 +63,27 @@ export const BannerTitleWrapper = styled.div`
   font-weight: 700;
   color: ${({ theme }) => theme.color.white};
   text-shadow: 3px 3px ${({ theme }) => theme.color.black};
+
+  word-break: break-all;
+
+  @media (max-width: 1260px) {
+    display: grid;
+    padding: 0 6.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(5.4019rem, auto));
+
+    height: fit-content;
+    margin-top: 6.25rem;
+  }
+
+  @media (max-width: 880px) {
+    font-size: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(3.5rem, auto));
+    padding: 0 3.75rem;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 
 export const AnimatedChar = styled.span`
@@ -71,6 +92,8 @@ export const AnimatedChar = styled.span`
   display: inline-block;
   animation: bounce 2s;
   animation-fill-mode: forwards;
+
+  max-width: 5.4019rem;
 
   @keyframes bounce {
     0%,

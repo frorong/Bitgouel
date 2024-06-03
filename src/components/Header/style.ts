@@ -9,6 +9,14 @@ export const Wrapper = styled.header`
   width: 100vw;
   height: 5.5rem;
   padding: 0 6.25rem;
+
+  @media (max-width: 880px) {
+    padding: 0 3.75rem;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 1.25rem;
+  }
 `;
 
 export const TitleWrapper = styled(Link)`
@@ -34,7 +42,7 @@ export const ItemWrapper = styled.div`
 
 export const ItemDivider = styled.div`
   width: 1px;
-  height: 20px;
+  height: 1.25rem;
 
   background-color: ${({ theme }) => theme.color.grey[400]};
 `;

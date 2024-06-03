@@ -22,7 +22,7 @@ const useAddPoint = (location: [number, number], map: Map) => {
 
   const textStyle = new Text({
     text: "빛고을국민체육센터",
-    font: "bold 20px Arial",
+    font: "bold 1.25rem Arial",
     fill: new Fill({
       color: "black",
     }),

@@ -74,28 +74,34 @@ const Section2: React.FC<Props> = ({ forwardRef }) => {
             </S.Caption>
           </S.DescriptionWrapper>
 
-          {Awards.map((award, i) => (
-            <S.Content
-              key={i}
-              ref={(el) => {
-                if (el) cardRefs.current[i] = el;
-              }}
-              color="mint"
-            >
-              <S.ContentHead color="mint">
-                <S.ContentTitle>{award.title}</S.ContentTitle>
-                <Image src={`/main/badminton${(i % 2) + 1}.png`} alt="" fill />
-              </S.ContentHead>
-              <Image
-                id="medal"
-                alt="medal"
-                src={`/medal/medal${award.grade}.webp`}
-                width={80}
-                height={80}
-              />
-              <S.ContentDescription>{award.name}</S.ContentDescription>
-            </S.Content>
-          ))}
+          <S.CardWrapper>
+            {Awards.map((award, i) => (
+              <S.Content
+                key={i}
+                ref={(el) => {
+                  if (el) cardRefs.current[i] = el;
+                }}
+                color="mint"
+              >
+                <S.ContentHead color="mint">
+                  <S.ContentTitle>{award.title}</S.ContentTitle>
+                  <Image
+                    src={`/main/badminton${(i % 2) + 1}.png`}
+                    alt=""
+                    fill
+                  />
+                </S.ContentHead>
+                <Image
+                  id="medal"
+                  alt="medal"
+                  src={`/medal/medal${award.grade}.webp`}
+                  width={80}
+                  height={80}
+                />
+                <S.ContentDescription>{award.name}</S.ContentDescription>
+              </S.Content>
+            ))}
+          </S.CardWrapper>
         </S.ContentWrapper>
       </S.Wrapper>
     </S.Section>

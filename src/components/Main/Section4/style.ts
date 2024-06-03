@@ -27,6 +27,14 @@ export const TelWrapper = styled.div`
   width: 100vw;
 
   padding: 6.25rem;
+
+  @media (max-width: 880px) {
+    padding: 3.75rem;
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.25rem;
+  }
 `;
 
 export const Text = styled.span`
@@ -35,17 +43,25 @@ export const Text = styled.span`
 `;
 
 export const MapWrapper = styled.div`
-  min-width: 800px;
-  height: 500px;
+  min-width: 50rem;
+  height: 31.25rem;
   overflow: hidden;
 
   position: relative;
-  border-radius: 10px;
+  border-radius: 0.625rem;
+
+  @media (max-width: 1260px) {
+    min-width: 18.75rem;
+  }
+
+  @media (max-width: 880px) {
+    min-width: 12.5rem;
+  }
 `;
 
 export const ImageMap = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
 `;
 
 export const ImageWrapper = styled.div`
@@ -53,11 +69,19 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
 
   width: 100%;
-  height: 500px;
-  border-radius: 10px;
+  height: 31.25rem;
+  border-radius: 0.625rem;
 
   img {
     object-fit: cover;
+  }
+
+  @media (max-width: 1260px) {
+    min-width: 18.75rem;
+  }
+
+  @media (max-width: 880px) {
+    min-width: 12.5rem;
   }
 `;
 

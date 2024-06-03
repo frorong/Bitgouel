@@ -32,7 +32,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   gap: 6.25rem;
 
-  padding-top: 300px;
+  padding-top: 18.75rem;
 `;
 
 export const Content = styled.div<{ color: string }>`
@@ -50,8 +50,8 @@ export const ContentImageWrapper = styled.div`
   position: relative;
   overflow: hidden;
 
-  width: 440px;
-  height: 400px;
+  width: 27.5rem;
+  height: 25rem;
   border-radius: 0.5rem 0.5rem 0 0;
 
   img {
