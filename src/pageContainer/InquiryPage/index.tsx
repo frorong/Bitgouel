@@ -35,16 +35,17 @@ const InquiryPage = () => {
       toast.error("모든 필드를 올바르게 입력해주세요.");
       return;
     }
-    sendEmail({
-      name: name,
-      title: title,
-      message: message,
-      contact: contact,
-    });
+    // sendEmail({
+    //   name: name,
+    //   title: title,
+    //   message: message,
+    //   contact: contact,
+    // });
 
-    document.cookie = "isMailed=true; max-age=600";
+    // document.cookie = "isMailed=true; max-age=600";
 
-    toast.success("문의가 성공적으로 발송되었습니다.");
+    // toast.success("문의가 성공적으로 발송되었습니다.");
+    toast.info("베타 기간 동안은 이용 불가합니다.");
     push("/");
   };
 
