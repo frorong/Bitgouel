@@ -11,12 +11,11 @@ export const Wrapper = styled.header`
   padding: 0 6.25rem;
 
   @media (max-width: 880px) {
-    /* font-size: 4rem; */
-    padding: 0 60px;
+    padding: 0 3.75rem;
   }
 
   @media (max-width: 600px) {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 `;
 
@@ -43,7 +42,7 @@ export const ItemWrapper = styled.div`
 
 export const ItemDivider = styled.div`
   width: 1px;
-  height: 20px;
+  height: 1.25rem;
 
   background-color: ${({ theme }) => theme.color.grey[400]};
 `;

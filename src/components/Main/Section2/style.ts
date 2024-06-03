@@ -30,40 +30,40 @@ export const Wrapper = styled.div`
   padding: 6.25rem 0 6.25rem 6.25rem;
 
   @media (max-width: 880px) {
-    padding: 60px;
+    padding: 3.75rem;
   }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
-  gap: 80px;
+  gap: 5rem;
 
   width: 100%;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 
   @media (max-width: 1736px) {
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
 `;
 
 export const CardWrapper = styled.div`
   display: flex;
-  gap: 80px;
+  gap: 5rem;
 
   @media (max-width: 1260px) {
-    gap: 40px;
+    gap: 2.5rem;
   }
 
   @media (max-width: 660px) {
-    gap: 10px;
+    gap: 0.625rem;
   }
 `;
 
 export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 `;
 
 export const Description = styled.span`
@@ -72,7 +72,7 @@ export const Description = styled.span`
 `;
 
 export const Caption = styled.span`
-  width: 600px;
+  width: 37.5rem;
   word-break: keep-all;
   ${({ theme }) => theme.typo.body1};
   color: ${({ theme }) => theme.color.black};
@@ -87,10 +87,10 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: 250px;
-  height: 300px;
+  width: 15.625rem;
+  height: 18.75rem;
   margin: 3.325rem 0;
-  border-radius: 16px;
+  border-radius: 1rem;
 
   box-shadow: 0.5375rem 0.5375rem 3.125rem silver;
   background-color: ${({ theme }) => theme.color.white};
@@ -100,15 +100,15 @@ export const Content = styled.div`
   }
 
   @media (max-width: 1260px) {
-    width: 150px;
-    height: 210px;
+    width: 9.375rem;
+    height: 13.125rem;
   }
 
   @media (max-width: 1260px) {
     #medal {
       margin: 0.5rem;
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
 `;
@@ -122,7 +122,7 @@ export const ContentHead = styled.div<{ color: string }>`
   height: 6.25rem;
   padding-top: 1.25rem;
   background-color: ${({ color }) => color};
-  border-radius: 16px 16px 0 0;
+  border-radius: 1rem 1rem 0 0;
 
   position: relative;
   overflow: hidden;
@@ -137,7 +137,7 @@ export const ContentTitle = styled.span`
   justify-content: center;
 
   z-index: 1;
-  width: 250px;
+  width: 15.625rem;
 
   ${({ theme }) => theme.typo.h3};
   color: ${({ theme }) => theme.color.black};
@@ -155,7 +155,7 @@ export const ContentDescription = styled.span`
   text-align: center;
 
   @media (max-width: 1260px) {
-    padding: 0 8px;
+    padding: 0 0.5rem;
     ${({ theme }) => theme.typo.body1};
   }
 `;

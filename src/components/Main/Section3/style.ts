@@ -39,24 +39,24 @@ export const TitleWrapper = styled.div`
   }
 
   @media (max-width: 600px) {
-    padding: 20px;
+    padding: 1.25rem;
   }
 `;
 
 export const DescriptionWrapper = styled.div`
-  padding: 40px 0;
+  padding: 2.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   text-align: center;
 
   @media (max-width: 880px) {
-    padding: 40px;
+    padding: 2.5rem;
   }
 
   @media (max-width: 600px) {
-    padding: 20px;
+    padding: 1.25rem;
   }
 `;
 
@@ -70,20 +70,20 @@ export const Description = styled.span`
 `;
 
 export const Caption = styled.span`
-  width: 600px;
+  width: 37.5rem;
   word-break: keep-all;
   ${({ theme }) => theme.typo.body1};
   color: ${({ theme }) => theme.color.white};
   text-align: center;
 
   @media (max-width: 880px) {
-    width: 500px;
+    width: 31.25rem;
   }
 `;
 
 export const VideoWrapper = styled.div`
   width: 100vw;
-  height: 600px;
+  height: 37.5rem;
 
   position: relative;
   filter: brightness(30%);
@@ -106,14 +106,14 @@ export const MindWrapper = styled.div`
 `;
 
 export const MindTitle = styled(Description)`
-  margin-top: 50px;
+  margin-top: 3.125rem;
   color: ${({ theme }) => theme.color.grey[900]};
 `;
 
 export const Mid = styled.div`
   position: relative;
   display: inline-block;
-  width: 30px;
+  width: 1.875rem;
   height: 3px;
   background-color: #f5f7fb;
 
@@ -122,8 +122,8 @@ export const Mid = styled.div`
 
 export const MidWrapper = styled.div`
   position: relative;
-  height: 20px;
-  margin: 25px 0;
+  height: 1.25rem;
+  margin: 1.5625rem 0;
 `;
 
 export const MidDes = styled(Caption)`

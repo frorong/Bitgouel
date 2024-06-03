@@ -20,10 +20,10 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 1.25rem;
 
   opacity: 0;
-  margin-top: 200px;
+  margin-top: 12.5rem;
 `;
 
 export const TextWrapper = styled.div`
@@ -31,8 +31,8 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  height: 260px;
-  padding: 0 20px;
+  height: 16.25rem;
+  padding: 0 1.25rem;
 `;
 
 export const Title = styled.span`
@@ -55,16 +55,16 @@ export const ImageWrapper = styled.div`
     object-fit: cover;
   }
 
-  width: 260px;
-  height: 260px;
-  border-radius: 8px;
+  width: 16.25rem;
+  height: 16.25rem;
+  border-radius: 0.5rem;
 `;
 
 export const Trigger = styled.div`
   z-index: -1;
 
   width: 40vw;
-  height: 200px;
+  height: 12.5rem;
 
   position: absolute;
   right: 0;

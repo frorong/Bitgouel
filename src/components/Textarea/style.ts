@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const TextInput = styled.textarea<{ isError: boolean }>`
   width: 100%;
-  height: 140px;
+  height: 8.75rem;
   padding: 0.5rem 0.75rem;
 
   border: solid 1px ${({ theme }) => theme.color.grey[200]};
