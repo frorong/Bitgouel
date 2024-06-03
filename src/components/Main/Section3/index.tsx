@@ -11,7 +11,7 @@ const Section3: React.FC<Props> = ({ forwardRef }) => {
   return (
     <S.Section ref={forwardRef}>
       <S.TitleWrapper>
-        <S.Title>" 최고의 실력과 조직력 "</S.Title>
+        <S.Title>&quot; 최고의 실력과 조직력 &quot;</S.Title>
 
         <S.DescriptionWrapper>
           <S.Description>
