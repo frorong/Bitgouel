@@ -66,9 +66,9 @@ const Section4: React.FC<Props> = ({ forwardRef }) => {
         <S.TelText>총무님: 010-1234-5678</S.TelText>
         <S.TelText>회장님: 010-1234-5678</S.TelText>
 
-        <S.DownloadButton href="/Introduce/rule.hwp" download>
+        {/* <S.DownloadButton href="/Introduce/rule.hwp" download>
           <S.TelText>회칙 다운로드</S.TelText>
-        </S.DownloadButton>
+        </S.DownloadButton> */}
       </S.TelWrapper>
       <S.Trigger ref={targetRef} />
       <S.CockWrapper id="cock">
