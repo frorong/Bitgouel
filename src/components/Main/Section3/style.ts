@@ -12,21 +12,14 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.color.white};
 `;
 
-export const Half = styled.div`
-  position: absolute;
-
-  top: 0;
-  width: 100vw;
-  height: 50vh;
-  border-radius: 0 0 0 40%;
-
-  background-color: ${({ theme }) => theme.color.secondary};
-`;
-
 export const Title = styled.span`
   font-size: 3.75rem;
   font-weight: 700;
   color: ${({ theme }) => theme.color.white};
+
+  @media (max-width: 880px) {
+    ${({ theme }) => theme.typo.h2};
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -40,6 +33,14 @@ export const TitleWrapper = styled.div`
   width: 100vw;
 
   padding-top: 6.25rem;
+
+  @media (max-width: 880px) {
+    padding-top: 2.25rem;
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -48,11 +49,24 @@ export const DescriptionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  text-align: center;
+
+  @media (max-width: 880px) {
+    padding: 40px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 
 export const Description = styled.span`
   ${({ theme }) => theme.typo.h3};
   color: ${({ theme }) => theme.color.grey[200]};
+
+  @media (max-width: 880px) {
+    ${({ theme }) => theme.typo.subtitle};
+  }
 `;
 
 export const Caption = styled.span`
@@ -61,6 +75,10 @@ export const Caption = styled.span`
   ${({ theme }) => theme.typo.body1};
   color: ${({ theme }) => theme.color.white};
   text-align: center;
+
+  @media (max-width: 880px) {
+    width: 500px;
+  }
 `;
 
 export const VideoWrapper = styled.div`
