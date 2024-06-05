@@ -7,11 +7,6 @@ import { gallery } from "@/constant";
 import { redirect, notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "빛고을배드민턴클럽 홈패이지",
-  description: "빛고을배드민턴클럽의 홈패이지입니다.",
-};
-
 const GALLERY_LIST_PAGE = "/gallery" as const;
 
 interface Params {
