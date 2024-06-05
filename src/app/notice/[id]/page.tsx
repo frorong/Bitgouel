@@ -4,13 +4,8 @@ import { NotionDetailPage } from "@/pageContainer";
 import { notion } from "@/lib";
 import { notice } from "@/constant";
 
-import { redirect } from "next/navigation";
+import { redirect, notFound } from "next/navigation";
 import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "빛고을배드민턴클럽 홈패이지",
-  description: "빛고을배드민턴클럽의 홈패이지입니다.",
-};
 
 const NOTICE_LIST_PATH = "/notice" as const;
 
@@ -19,6 +14,26 @@ interface Params {
     id: string;
   };
 }
+
+export const generateMetadata = async ({
+  params,
+}: Params): Promise<Metadata> => {
+  try {
+    const { title, description } = notice[parseInt(params.id)];
+
+    return {
+      title: { absolute: title },
+      description: description.slice(120),
+      openGraph: {
+        title: title,
+        description: description.slice(120),
+        url: `https://www.frorong.shop/gallery/${params.id}`,
+      },
+    };
+  } catch (e) {
+    return notFound();
+  }
+};
 
 export default async function Notice({ params: { id } }: Params) {
   const currentNotice = notice[parseInt(id)];
