@@ -27,7 +27,6 @@ export const generateMetadata = async ({
       openGraph: {
         title: title,
         description: description.slice(120),
-        url: `https://www.frorong.shop/gallery/${params.id}`,
       },
     };
   } catch (e) {

@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { Header } from "@/components";
 import Providers from "./providers";
 
-import { GoogleAnalytics } from "@/components";
-
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
@@ -23,9 +21,6 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
-          <Suspense fallback={null}>
-            <GoogleAnalytics />
-          </Suspense>
         </Providers>
       </body>
     </html>
